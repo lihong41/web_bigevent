@@ -40,10 +40,11 @@ function renderAvatar(user) {
   // 2.设置欢迎的文本
   $('#welcome').html('欢迎&nbsp;&nbsp;'+ name)
   // 3.按需渲染用户的头像
-  if(user.user_pic != null) {
+  console.log(user);
+  if(user.data.user_pic != null) {
     // 3.1 渲染图片头像
     $('.layui-nav-img').attr('src',user.data.user_pic).show()
-    $('text-avatar').hide()
+    $('.text-avatar').hide()
   }else{
     // 3.2 渲染文本头像
     $('.layui-nav-img').hide()
